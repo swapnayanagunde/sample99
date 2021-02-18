@@ -1,0 +1,61 @@
+package shopclues.library;
+
+import java.util.Set;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.testng.annotations.Test;
+
+import utils.Apputils;
+
+
+
+
+public class addtocart extends Apputils
+{
+ 
+	public void checkaddtocart()
+	{
+
+	driver.findElement(By.linkText("Sign In")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//*[@id='main_user_login']")).sendKeys("9703257484");
+	//driver.findElement(By.name("user_login")).sendKeys("9703257484");
+	driver.findElement(By.xpath("//div[1]/form/fieldset/div[3]/input")).sendKeys("password@123");
+	driver.findElement(By.xpath("//*[@id='login_button']")).click();
+	Thread.sleep(10000);
+	driver.findElement(By.xpath("//div[4]/ul/li[5]/a/i")).click();
+	JavascriptExecutor js=(JavascriptExecutor)driver;
+	js.executeScript("window.scrollBy(0,1000)");
+	driver.findElement(By.xpath("//div[4]/ul/li[5]/div/ul/li[10]/a")).click();
+    driver.findElement(By.xpath("//*[@id='autocomplete']")).sendKeys("kettle");
+    driver.findElement(By.linkText("Search")).click();
+     driver.findElement(By.xpath("//div[2]/div[1]/div[3]/div[1]/a")).click();
+    
+    String MainWindow=driver.getWindowHandle();
+    Set<String> s1=driver.getWindowHandles();		
+    Iterator<String>i1=s1.iterator();		
+    		
+    while(i1.hasNext())			
+    {		
+        String ChildWindow=i1.next();		
+        		
+        if(!MainWindow.equalsIgnoreCase(ChildWindow))			
+        {    		
+             
+                // Switching to Child window
+         driver.switchTo().window(ChildWindow);	
+         Thread.sleep(10000);
+         driver.findElement(By.xpath(".//a[text()='Ok']")).click();
+         driver.findElement(By.xpath("//*[@id='buy']")).click();
+         Thread.sleep(10000);
+         driver.findElement(By.xpath("//*[@id='proceed_to_payment_button']")).click();
+         driver.findElement(By.xpath("//ul/div/div[1]/li[7]/label")).click();
+         driver.findElement(By.xpath("//*[@id='placeOrderAmt']")).click();
+                             
+        }
+}
+}
+}

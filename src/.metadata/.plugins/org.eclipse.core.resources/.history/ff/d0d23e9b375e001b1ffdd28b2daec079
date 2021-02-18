@@ -1,0 +1,31 @@
+package shopclues.tests;
+
+import org.testng.annotations.Test;
+
+import shopclues.library.homepage;
+import shopclues.library.loginpage;
+import utils.Apputils;
+
+@Test
+public class Customerlogin extends Apputils
+{
+  
+	public static void main(String[]args)
+	 {
+	
+		Apputils.launchApp();
+		loginpage lhome=new loginpage();
+		boolean res=lhome.uselogin("9703257484", "password@123");
+		if(res)
+		{
+		System.out.println("pass");
+		}else
+		{
+			System.out.println("fail");
+		}
+	homepage hhome=new homepage();
+	hhome.logoutmodule();
+	Apputils.closeApp();
+			
+	}
+}

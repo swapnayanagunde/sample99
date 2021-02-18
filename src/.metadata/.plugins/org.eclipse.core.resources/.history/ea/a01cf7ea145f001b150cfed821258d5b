@@ -1,0 +1,33 @@
+package shopclues.library;
+
+import org.openqa.selenium.By;
+
+import utils.Apputils;
+
+public class loginpage extends Apputils
+{
+
+	
+	public boolean uselogin(double phone,String pwd)
+	
+	{
+		driver.findElement(By.linkText("Sign In")).click();
+		String exptitle,acttitle;
+		exptitle="Online Shopping Site India";
+		driver.findElement(By.xpath("//*[@id='main_user_login']")).sendKeys("phone");
+		driver.findElement(By.xpath("//div[1]/form/fieldset/div[3]/input")).sendKeys(pwd);
+		driver.findElement(By.xpath("//*[@id='login_button']")).click();
+		acttitle=driver.getTitle();
+		if(acttitle.toLowerCase().contains(acttitle.toLowerCase()))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		
+	    }
+	
+	}
+}
+ 

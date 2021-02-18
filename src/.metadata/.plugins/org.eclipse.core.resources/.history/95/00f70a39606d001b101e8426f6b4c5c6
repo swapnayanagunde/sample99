@@ -1,0 +1,17 @@
+package demo1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class snapdeal 
+{
+
+	public static void main(String[] args)
+	{
+		System.setProperty("webdriver.geckodriver", "gecko.driver.exe");
+		WebDriver driver=new FirefoxDriver();
+		driver.get("http://snapdeal.com");
+
+	}
+
+}

@@ -1,0 +1,13 @@
+breadcrumb.org.eclipse.debug.ui.DebugPerspective=true
+content_assist_favorite_static_members=org.testng.Assert.*
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="utils.Apputils"><rhs name\="shopclues.library.homepage"/><rhs name\="shopclues.library.loginpage"/><rhs name\="shopclues.pages.homepage"/></lhs><lhs name\="shopclues.library.loginpage"><rhs name\="shopclues.library.loginpage"/></lhs><lhs name\="shopclues.library.homepage"><rhs name\="shopclues.library.homepage"/></lhs><lhs name\="shopclues.pages.homepage"><rhs name\="shopclues.pages.homepage"/></lhs><lhs name\="java.lang.Enum"><rhs name\="org.apache.poi.ss.usermodel.CellType"/><rhs name\="java.util.concurrent.TimeUnit"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="org.apache.poi.ss.usermodel.CellType"/><rhs name\="java.util.concurrent.TimeUnit"/></lhs><lhs name\="utils.Apputils2"><rhs name\="ecommerce.library.loginmodule"/><rhs name\="ecommerce.library.homepage"/><rhs name\="ecommerce.library.addtocart"/></lhs><lhs name\="ecommerce.library.homepage"><rhs name\="ecommerce.library.homepage"/></lhs><lhs name\="ecommerce.tests.loginmodule"><rhs name\="ecommerce.tests.loginmodule"/></lhs><lhs name\="ecommerce.library.loginmodule"><rhs name\="ecommerce.library.loginmodule"/></lhs><lhs name\="ecommerce.library.addtocart"><rhs name\="ecommerce.library.addtocart"/></lhs></history>
+content_assist_number_of_computers=12
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=20
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

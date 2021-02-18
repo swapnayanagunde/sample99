@@ -1,0 +1,22 @@
+package flipkart.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class addcartpage 
+{
+    @FindBy(xpath="//*[@name='q']") WebElement searchelememnt;
+	@FindBy(xpath="//button[@class='L0Z3Pu']") WebElement buttonelement;
+	@FindBy(xpath="//a[text()='Striped Men Round Neck Blue, Yellow T-Shirt']") WebElement imgelement;
+	@FindBy(xpath="//span[@class='_3iRXzi']") WebElement button2element;
+	
+	
+	
+	
+	public void verifyaddcart(String itemname)
+	{
+		
+	}
+	
+	
+}

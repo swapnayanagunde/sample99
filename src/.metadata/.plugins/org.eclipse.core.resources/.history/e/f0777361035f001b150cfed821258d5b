@@ -1,0 +1,9 @@
+package shopclues.tests;
+
+public class customervalidtest {
+
+	public customervalidtest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,80 @@
+package shopclues.tests;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+
+import shopclues.library.loginpage;
+import utils.Apputils;
+import utils.XLUtils;
+
+public class customervalidtest extends Apputils
+{
+
+	public void checklogin(double phone,String pwd) throws IOException 
+	{
+	String xlfile="S:\\shopclues.xlsx";
+	String xlsheet="valid";
+	loginpage lhome=new loginpage();
+	int rowcount=XLUtils.getRowCount(xlfile, xlsheet);
+	for(int i=1;i<=rowcount;i++)
+	{
+		phone=XLUtils.getNumericcellData(xlfile, xlsheet, i, 0);
+		pwd=XLUtils.getStringcellData(xlfile, xlsheet, i, 1);
+		boolean res=lhome.uselogin(phone, pwd);
+		Assert.assertTrue(res);
+		if(res)
+		{
+			XLUtils.setcellData(xlfile, xlsheet, i, 3, "PASS");
+			XLUtils.fillGreencolor(xlfile, xlsheet, i, 3);
+		}else
+		{
+			XLUtils.setcellData(xlfile, xlsheet, i, 3, "FAIL");
+			XLUtils.fillRedcolor(xlfile, xlsheet, i, 3);
+		}
+		
+	}
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

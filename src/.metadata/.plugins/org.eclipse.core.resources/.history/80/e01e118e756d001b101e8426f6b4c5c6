@@ -1,0 +1,46 @@
+package demo1;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.interactions.Actions;
+
+public class snapdeal 
+{
+
+	public static void main(String[] args) throws InterruptedException
+	{
+		System.setProperty("webdriver.geckodriver", "gecko.driver.exe");
+		FirefoxOptions options = new FirefoxOptions();
+		options.addPreference("dom.webnotifications.enabled", false);
+		WebDriver driver=new FirefoxDriver(options);
+		driver.get("http://snapdeal.com");
+		Actions builder=new Actions(driver);
+		WebElement element=driver.findElement(By.xpath("//span[text()='Sign In']"));
+		builder.moveToElement(element).build().perform();
+		driver.findElement(By.xpath("//a[text()='login']")).click();
+		driver.switchTo().frame("loginIframe");
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys("9550154060");
+		driver.findElement(By.xpath("//button[@id='checkUser']")).click();
+		driver.findElement(By.xpath("//input[@id='j_password_login_uc']")).sendKeys("snapdeal@2626");
+		driver.findElement(By.xpath("//button[@id='submitLoginUC']")).click();
+		Thread.sleep(10000);
+		driver.findElement(By.xpath("//input[@id='inputValEnter']")).sendKeys("sunglass men");
+		driver.findElement(By.xpath("//span[@class='searchTextSpan']")).click();
+	    JavascriptExecutor js=(JavascriptExecutor)driver;
+	    WebElement we=driver.findElement(By.xpath("//p[@title='Creature - Purple Cat Eye Sunglasses ( TIDE-101 )']"));
+	    js.executeScript("arguments[0].scrollIntoView();", we);
+	    we.click();
+	    
+	    
+	    
+
+	}
+
+}

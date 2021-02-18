@@ -1,0 +1,21 @@
+package shopclues.tests;
+
+import shopclues.library.addtocart;
+
+public class additemtest 
+{
+
+public void verifyitemadded(String phone,String pwd,String itemname)
+{
+	
+	addtocart ahome=new addtocart();
+	res=ahome.checkitemadde("9703257484", "password@123", "kettle");
+Assert.assert 
+	
+	
+	
+	
+	
+	}
+
+}

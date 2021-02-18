@@ -1,0 +1,9 @@
+package shopclues.library;
+
+public class addtocart {
+
+	public addtocart() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

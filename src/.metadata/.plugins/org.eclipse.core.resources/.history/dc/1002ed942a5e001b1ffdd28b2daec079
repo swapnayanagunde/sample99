@@ -1,0 +1,9 @@
+package shopclues.tests;
+
+public class loginpage {
+
+	public loginpage() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

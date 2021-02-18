@@ -1,0 +1,29 @@
+package shopclues.library;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+
+import utils.Apputils;
+
+public class homepage extends Apputils
+{
+
+	public boolean logoutmodule() throws InterruptedException
+	{
+		driver.findElement(By.xpath("//div[4]/ul/li[5]/a/i")).click();
+		Thread.sleep(2000);
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,2000)");
+		driver.findElement(By.xpath("//div[4]/ul/li[5]/div/ul/li[10]/a")).click();
+		if(driver.findElement(By.linkText("Sign In")).isDisplayed())
+		{
+			return true;
+		}else
+			
+		{
+		return false;
+		
+	}
+
+	}
+}

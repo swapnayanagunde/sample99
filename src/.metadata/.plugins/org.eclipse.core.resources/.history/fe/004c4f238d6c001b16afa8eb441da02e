@@ -1,0 +1,15 @@
+package shopclueses.tests;
+
+import utils.Apputils;
+
+public class Adminlogintest extends Apputils
+{
+
+	public void checkadminlogin()
+	{
+		
+	}
+	
+	
+	
+}

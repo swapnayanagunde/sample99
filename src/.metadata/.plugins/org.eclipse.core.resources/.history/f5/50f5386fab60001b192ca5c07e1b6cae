@@ -1,0 +1,17 @@
+package shopclues.tests;
+
+public class additemtest 
+{
+
+public void verifyitemadded(String phone,String pwd,String itemname)
+{
+	
+	
+	
+	
+	
+	
+	
+	}
+
+}

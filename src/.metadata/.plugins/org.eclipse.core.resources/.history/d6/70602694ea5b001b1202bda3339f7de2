@@ -1,0 +1,39 @@
+package demo1;
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class concept1
+{
+
+	public static void main(String[] args) 
+	{
+		System.setProperty("webdriver.gecko.driver", "d:\\cgeckodriver.exe");
+		WebDriver driver=new FirefoxDriver();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		driver.get("http://gmail.com");
+		driver.findElement(By.linkText("Help")).click();
+		Set<String> allwindows=driver.getWindowHandles();
+		
+ 		Object[] windows=allwindows.toArray();
+ 		String window1=windows[0].toString();
+ 		String window2=windows[1].toString();
+		
+		driver.switchTo().window(window2);
+		driver.findElement(By.linkText("Community")).click();
+		
+		System.out.println(driver.getTitle());
+
+		driver.switchTo().window(window1);
+		
+		System.out.println(driver.getTitle());	
+
+	}
+
+}

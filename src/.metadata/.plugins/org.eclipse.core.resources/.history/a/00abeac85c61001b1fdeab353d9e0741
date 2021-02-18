@@ -1,0 +1,43 @@
+package shopclues.tests;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import shopclues.library.loginpage;
+import utils.Apputils;
+import utils.XLUtils;
+
+public class customerinvalidtest  extends Apputils
+{
+	 @Test
+		public void checklogin() throws IOException, InterruptedException 
+		{
+		String xlfile="S:\\shopclues.xlsx";
+		String xlsheet="invalid";
+		String phone, pwd;
+		loginpage lhome=new loginpage();
+		int rowcount=XLUtils.getRowCount(xlfile, xlsheet);
+		for(int i=1;i<=rowcount;i++)
+		{
+			phone=XLUtils.getStringcellData(xlfile, xlsheet, i, 0);
+			pwd=XLUtils.getStringcellData(xlfile, xlsheet, i, 1);
+			boolean res=lhome.useloginwithinvalid(phone, pwd);
+			Assert.assertTREU(res);
+			if(res)
+			{
+				XLUtils.setcellData(xlfile, xlsheet, i, 2, "PASS");
+				XLUtils.fillGreencolor(xlfile, xlsheet, i, 2);
+			}else
+			{
+				XLUtiLs.setcellData(xlfile, xlsheet, i, 2, "FAIL");
+				XLUtils.fillRedcolor(xlfile, xlsheet, i, 2);
+			}
+			
+		}
+		
+		
+		}
+
+}

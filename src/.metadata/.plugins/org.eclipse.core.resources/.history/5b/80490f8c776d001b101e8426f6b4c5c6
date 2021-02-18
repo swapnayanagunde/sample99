@@ -1,0 +1,32 @@
+package shopclues.library;
+
+import org.openqa.selenium.support.FindBy;
+
+public class registration 
+{
+@FindBy()
+	
+	public void verifysignup()
+	{
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+}
+/*
+driver.findElement(By.linkText("Sign In")).click();
+Thread.sleep(2000);
+driver.findElement(By.xpath("//*[@id='reg_tab']")).click();
+//driver.findElement(By.linkText("REGISTER")).click();
+driver.findElement(By.name("email")).sendKeys("skomirishetty9@gmail.com");
+driver.findElement(By.name("phone")).sendKeys("9703257484");
+driver.findElement(By.id("register_with_password")).click();
+driver.findElement(By.xpath("//*[@name='password']")).sendKeys("password@123");
+driver.findElement(By.name("register")).click();*/

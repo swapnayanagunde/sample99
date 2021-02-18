@@ -1,0 +1,21 @@
+package shopcluesproject.test;
+
+import org.openqa.selenium.support.PageFactory;
+
+import shopclues.pages.homepage;
+import shopclues.pages.loginpage;
+import utils.Apputils;
+
+public class loginmodule extends Apputils
+{
+	public void checklogin()
+	{
+		loginpage lp=PageFactory.initElements(driver,loginpage.class);
+		lp.userlogin("9703257484", "password@123");
+		homepage hp=PageFactory.initElements(driver, homepage.class);
+		hp.logout();
+	}
+
+
+}
+

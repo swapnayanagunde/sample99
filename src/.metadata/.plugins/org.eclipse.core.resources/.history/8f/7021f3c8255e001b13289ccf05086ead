@@ -1,0 +1,53 @@
+package demo1;
+
+import java.util.Iterator;		
+import java.util.Set;		
+import org.openqa.selenium.By;		
+import org.openqa.selenium.WebDriver;		
+import org.openqa.selenium.firefox.FirefoxDriver;	
+public class concept1
+{
+
+		/*System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+		WebDriver driver=new FirefoxDriver();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		driver.get("http://gmail.com");
+		driver.findElement(By.linkText("Help")).click();
+		//driver.findElement(By.linkText("Community")).click();
+		Set<String> s=driver.getWindowHandles();
+	 	for(String i:s)
+	 	{
+	         System.out.println(i);
+	 	   String t= driver.switchTo().window(i).getTitle();
+	 	   System.out.println(t);
+	 	   if(t.contains("Google Account Help"))
+	 	   {
+	 		   //driver.findElement(By.linkText("Community")).click();
+	 		   driver.close();
+	 	   }
+	 		}*/	
+			
+ 		
+
+		    public static void main(String[] args) throws InterruptedException 
+		    {									
+		        	WebDriver driver=new FirefoxDriver();			
+		        		
+		        //Launching the site.				
+		            driver.get("http://demo.guru99.com/popup.php");			
+		        driver.manage().window().maximize();		
+		                		
+		driver.findElement(By.xpath("//*[contains(@href,'popup.php')]")).click();			
+		        		
+		        String MainWindow=driver.getWindowHandle();		
+		        		
+		        // To handle all new opened window.				
+		        			
+		    }
+				
+
+	}
+
+

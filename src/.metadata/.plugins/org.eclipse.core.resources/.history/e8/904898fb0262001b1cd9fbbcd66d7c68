@@ -1,0 +1,22 @@
+package demo1;
+
+public class sample
+{
+public static int addition(int i,int j)
+{
+	int k=i+j;
+	return k;
+}
+	public static void main(String[] args) 
+	{
+int i=10;
+int j=20;
+int k=0;
+k=addition(i,j);
+int x=30;
+int y=0;
+y=k+j;
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package shopclues.tests;
+
+public class additem {
+
+	public additem() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

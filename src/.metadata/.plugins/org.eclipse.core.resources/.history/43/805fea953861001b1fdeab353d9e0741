@@ -1,0 +1,28 @@
+package shopclues.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class homepage 
+{
+
+	
+
+}
+
+/*
+//Define Elements
+@FindBy(id="txtUsername") WebElement uidelement;
+@FindBy(name="txtPassword") WebElement pwdelement;
+@FindBy(xpath="//*[@value='LOGIN']") WebElement loginelement;
+
+
+//Define methods
+public void adminLogin(String uname,String pword)
+{
+	uidelement.sendKeys(uname);
+	pwdelement.sendKeys(pword);
+	loginelement.click();
+}
+
+*/

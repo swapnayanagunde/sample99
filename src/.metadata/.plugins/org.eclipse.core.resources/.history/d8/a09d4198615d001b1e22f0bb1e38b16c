@@ -1,0 +1,9 @@
+package utils;
+
+public class Apputils {
+
+	public Apputils() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

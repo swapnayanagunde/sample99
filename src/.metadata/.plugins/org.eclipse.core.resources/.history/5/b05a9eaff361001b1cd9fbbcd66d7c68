@@ -1,0 +1,50 @@
+package demo1;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.ProfilesIni;
+
+public class sample2 {
+
+
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+	
+
+		System.setProperty("WebDriver.gecko.driver", "geckodriver.exe");
+		
+		ProfilesIni profile = new ProfilesIni();
+		FirefoxProfile myprofile = profile.getProfile("xyzprofile");
+		FirefoxOptions options = new FirefoxOptions();
+		options.setProfile(myprofile);
+		options.addPreference("dom.webnotifications.enabled", false);
+	    //WebDriver driver=new FirefoxDriver(options);
+		
+		WebDriver driver = new FirefoxDriver(options);
+		driver.get("http://shopclues.com");
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		/*driver.findElement(By.xpath("//*[@id='sign-in']")).click();
+	  driver.findElement(By.xpath("//*[@id='main_user_login']")).sendKeys("9703257484");
+      driver.findElement(By.xpath("//form[@name='loginform']//input[@name='password']")).sendKeys("password@123");
+      driver.findElement(By.xpath("//*[@id='login_button']")).click();
+	  Thread.sleep(10000);
+	  driver.findElement(By.xpath("//*[@id='sc_uname']")).click();*/
+	  JavascriptExecutor js=(JavascriptExecutor)driver;
+	  //js.executeScript("window.scrollBy(0,1000)");
+	 // WebElement Element = driver.findElement(By.linkText("Linux"));
+	WebElement Element= driver.findElement(By.xpath("//*[@id='sc_uname']//li[10]"));
+	js.executeScript("arguments[0].scrollIntoView();", Element);
+	Element.click();
+	 
+    	
+	}
+}

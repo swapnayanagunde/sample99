@@ -1,0 +1,9 @@
+package shopcluesproject.test;
+
+public class loginmodule {
+
+	public loginmodule() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

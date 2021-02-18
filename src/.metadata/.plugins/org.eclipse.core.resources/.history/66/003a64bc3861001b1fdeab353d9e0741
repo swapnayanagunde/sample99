@@ -1,0 +1,44 @@
+package shopclues.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class homepage 
+{
+@FindBy(xpath="//div[4]/ul/li[5]/a/i") WebElement singoutlink;
+@FindBy(xpath="//div[4]/ul/li[5]/div/ul/li[10]/a") WebElement logoutlink;
+	public void logout()
+	{
+		singoutlink.click();
+		logoutlink.click();
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+@FindBy(partialLinkText="Welcome") WebElement welcomelink;
+@FindBy(linkText= "Logout") WebElement logout;
+
+
+public void logout()
+{
+	welcomelink.click();
+	logout.click();
+}
+
+*/
+

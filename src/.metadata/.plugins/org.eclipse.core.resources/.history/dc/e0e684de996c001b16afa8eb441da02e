@@ -1,0 +1,29 @@
+package flipkart.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class loginmodule 
+{
+	@FindBy(xpath="//input[@class='_2IX_2- VJZDxU']") WebElement  melement;
+	@FindBy(xpath="//input[@class='_2IX_2- _3mctLh VJZDxU']") WebElement pwdelement;
+	@FindBy(xpath="//*[@class='_2KpZ6l _2HKlqd _3AWRsL']") WebElement loginelement;
+	
+	
+	
+	public void loginmethod(String Mnumber,String pwd) 
+	{
+		melement.sendKeys(Mnumber);
+		pwdelement.sendKeys(pwd);
+		loginelement.click();
+	
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+}

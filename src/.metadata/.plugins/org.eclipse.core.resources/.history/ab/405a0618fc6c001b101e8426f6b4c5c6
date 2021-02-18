@@ -1,0 +1,17 @@
+package flipkart.pages;
+
+public class addcartpage 
+{
+
+	
+	
+	
+	
+	
+	public void verifyaddcart(String itemname)
+	{
+		
+	}
+	
+	
+}

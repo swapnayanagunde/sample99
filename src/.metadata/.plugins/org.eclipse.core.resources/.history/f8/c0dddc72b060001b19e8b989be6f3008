@@ -1,0 +1,27 @@
+package pageobjectmodel;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class lpginpage 
+{
+	
+	//Define Elements
+	@FindBy(linkText="Sign In") WebElement signinelement;
+	@FindBy(xpath="//*[@id='main_user_login']") WebElement uideleemnt;
+	@FindBy(xpath="//div[1]/form/fieldset/div[3]/input") WebElement pwdelement;
+	@FindBy(xpath="//*[@id='login_button']") WebElement loginelement;
+
+	
+	//Define methods
+	public void adminLogin(String phone,String pwd)
+	{
+		signinelement.click();
+		uideleemnt.sendKeys("9703257484");
+		pwdelement.sendKeys("password@123");
+		loginelement.click();
+		
+	}
+
+
+}

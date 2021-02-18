@@ -1,0 +1,27 @@
+package shopclues.pages;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import utils.Apputils;
+
+public class homepage extends Apputils
+{
+@FindBy(xpath="//div[4]/ul/li[5]/a/i") WebElement signoutlink;
+@FindBy(xpath="//div[4]/ul/li[5]/div/ul/li[10]/a") WebElement logoutlink;
+	
+public void logout()
+	{
+		signoutlink.click();
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		//js.executeScript("window.scrollBy(0,2000)");
+
+        WebElement Element = driver.findElement(By.linkText(""));
+
+        //This will scroll the page till the element is found		
+        js.executeScript("arguments[0].scrollIntoView();", Element);
+		logoutlink.click();
+	}
+}
+

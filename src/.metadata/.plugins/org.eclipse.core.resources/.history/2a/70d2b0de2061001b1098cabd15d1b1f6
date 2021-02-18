@@ -1,0 +1,39 @@
+package shopclues.library;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+
+import utils.Apputils;
+
+public class homepage extends Apputils
+{
+
+	public booleanlogoutmodule()
+	{
+		
+		driver.findElement(By.xpath("//div[4]/ul/li[5]/a/i")).click();
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,1000)");
+		driver.findElement(By.xpath("//div[4]/ul/li[5]/div/ul/li[10]/a")).click();
+		if(driver.findElement(null)).isDisplayed()	
+		{
+			return true;
+		}else
+		{
+			return false;
+		}
+		
+		
+		
+	}
+}
+/*
+driver.findElement(By.xpath("//img[@src='images/admin_but_03.jpg']")).click();
+if(driver.findElement(By.id("login")).isDisplayed())
+{
+	return true;
+}else
+{
+	return false;
+}
+*/

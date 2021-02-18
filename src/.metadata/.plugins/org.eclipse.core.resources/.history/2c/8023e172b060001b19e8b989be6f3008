@@ -1,0 +1,18 @@
+package pageobjectmodel;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class homepage 
+{
+@FindBy(xpath="//div[4]/ul/li[5]/a/i") WebElement signoutlink;
+@FindBy(xpath="//div[4]/ul/li[5]/div/ul/li[10]/a") WebElement singout;
+
+
+public void logout()
+{
+signoutlink.click();	
+singout.click();
+}
+}
